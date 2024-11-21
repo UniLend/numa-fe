@@ -1,51 +1,45 @@
-// components/FAQAccordion.js
-import { useState } from 'react';
+import { useState, FC } from "react";
+import Image from "next/image";
+// import DownArrow from "../../public/images/down-arrow.svg";
+interface FAQItem {
+  question: string;
+  answer: string;
+}
 
-const FAQAccordion = ({ items }) => {
-  const [activeIndex, setActiveIndex] = useState(null);
+interface FAQAccordionProps {
+  items: FAQItem[];
+}
 
-  const handleToggle = (index) => {
+const FAQAccordion: FC<FAQAccordionProps> = ({ items }) => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const handleToggle = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
   return (
-    <div style={{ maxWidth: '600px', margin: '0 auto', color: '#333' }}>
+    <div className='container'>
       {items.map((item, index) => (
-        <div
-          key={index}
-          style={{ borderBottom: '1px solid #ccc', padding: '10px 0' }}
-        >
+        <div key={index} className='item'>
           {/* Question */}
           <div
             onClick={() => handleToggle(index)}
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              cursor: 'pointer',
-              fontWeight: 'bold',
-              color: activeIndex === index ? '#fff' : '#fff',
-              padding: '10px 0',
-            }}
+            className={`question ${activeIndex === index ? "active" : ""}`}
           >
             <span>{item.question}</span>
-            {/* <span>{activeIndex === index ? '▲' : '▼'}</span> */}
-            <span style={{
-              display: 'inline-block',
-              transform: activeIndex === index ? 'rotate(180deg)' : 'rotate(0deg)',
-              transition: 'transform 0.2s ease-in-out'
-            }}>▼</span>
+            <span className={`icon ${activeIndex === index ? "rotated" : ""}`}>
+              <Image
+                className='downArrow'
+                src='/images/arrow-down-white.svg'
+                alt='Down arrow'
+                width={15}
+                height={15}
+              />
+            </span>
           </div>
 
-          <div
-            style={{
-              maxHeight:
-                activeIndex === index ? `${item.answer.length * 0.5}px` : '0',
-              overflow: 'hidden',
-              transition: 'max-height 0.3s ease-in-out',
-              color: '#fff',
-            }}
-          >
-            <div style={{ padding: '10px 0' }}>{item.answer}</div>
+          <div className={`answer ${activeIndex === index ? "expanded" : ""}`}>
+            <div>{item.answer}</div>
           </div>
         </div>
       ))}

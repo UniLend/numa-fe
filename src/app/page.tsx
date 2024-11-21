@@ -1,5 +1,5 @@
-'use client';
-import React, { useEffect, useState } from 'react';
+"use client";
+import React, { useEffect, useState } from "react";
 import {
   SignMeta,
   getLocalAccessToken,
@@ -7,17 +7,17 @@ import {
   postData,
   setLocalAccessToken,
   setLocalStorage,
-} from '@/context/constants';
-import Dashboard from './dashboard';
+} from "@/context/constants";
+import Dashboard from "./dashboard";
 import {
   useAccount,
   useAccountEffect,
   useDisconnect,
   useSignMessage,
-} from 'wagmi';
-import { useWeb3Modal } from '@web3modal/wagmi/react';
-import ConnectButton from '@/components/connectButton';
-import AddNetwork from '@/components/customNetwork';
+} from "wagmi";
+import { useWeb3Modal } from "@web3modal/wagmi/react";
+import ConnectButton from "@/components/connectButton";
+import AddNetwork from "@/components/customNetwork";
 
 export default function Home() {
   const { address } = useAccount();
@@ -27,19 +27,19 @@ export default function Home() {
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loginStatus, setLoginStatus] = useState(0);
-  const [accessToken, setAccessToken] = useState('');
+  const [accessToken, setAccessToken] = useState("");
 
   const logOut = () => {
     if (loginStatus != 1) {
       setLoginStatus(0);
       setIsLoggedIn(false);
-      setLocalAccessToken(userAddress, '');
+      setLocalAccessToken(userAddress, "");
       disconnect();
     }
   };
 
   function checkLogin() {
-    if (getLocalAccessToken() == '') {
+    if (getLocalAccessToken() == "") {
       setIsLoggedIn(false);
       logOut();
     } else {
@@ -48,11 +48,11 @@ export default function Home() {
     }
   }
 
-  let userAddress = address ? address : '';
+  let userAddress = address ? address : "";
   if (userAddress) {
-    let currAddr = getLocalStorage('addr');
+    let currAddr = getLocalStorage("addr");
     if (currAddr != userAddress) {
-      setLocalStorage('addr', userAddress);
+      setLocalStorage("addr", userAddress);
       checkLogin();
     }
   }
@@ -67,12 +67,12 @@ export default function Home() {
     expiry: number,
     signature: string
   ) => {
-    let response = await postData('/login', accessToken, {
+    let response = await postData("/login", accessToken, {
       address: address,
       nonce: nonce,
       expiry: expiry,
       signature: signature,
-      type: 'eth',
+      type: "eth",
     });
 
     if (response.status == 200) {
@@ -99,7 +99,7 @@ export default function Home() {
 
   useAccountEffect({
     onConnect(data) {
-      if (getLocalAccessToken() == '') {
+      if (getLocalAccessToken() == "") {
         setLoginStatus(1);
         signIN(data.address);
       } else {
@@ -130,7 +130,7 @@ export default function Home() {
                 <div className='navItem'>How it Works?</div>
                 <div className='navItem'>
                   <a
-                    style={{ color: '#fff', fontWeight: '500' }}
+                    style={{ color: "#fff", fontWeight: "500" }}
                     href='https://t.me/UniLendFinance'
                     target='_blank'
                   >
@@ -139,7 +139,7 @@ export default function Home() {
                 </div>
                 <div className='navItem'>
                   <a
-                    style={{ color: '#fff',fontWeight: '500' }}
+                    style={{ color: "#fff", fontWeight: "500" }}
                     href='https://x.com/UniLend_Finance'
                     target='_blank'
                   >

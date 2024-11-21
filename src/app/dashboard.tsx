@@ -1,10 +1,10 @@
-'use client';
-import ConnectButton from '@/components/connectButton';
+"use client";
+import ConnectButton from "@/components/connectButton";
 // import HomeBox from "@/components/homePage";
-import TxnBox from '@/components/txnsBox';
+import TxnBox from "@/components/txnsBox";
 
-import useSWR from 'swr';
-import React, { useEffect, useState } from 'react';
+import useSWR from "swr";
+import React, { useEffect, useState } from "react";
 import {
   authFetcher,
   fetcher,
@@ -12,26 +12,26 @@ import {
   formatAmount,
   fetcherPublic,
   priceApi,
-} from '@/context/constants';
-import DepositModal from '@/components/depositModal';
-import WithdrawModal from '@/components/withdrawModal';
-import AddAddressModal from '@/components/addAddressModal';
-import AddressList from '@/components/addressList';
-import { timeStamp } from 'console';
-import FAQAccordion from '@/components/accordian';
-import { faqData } from '../helper/constants';
+} from "@/context/constants";
+import DepositModal from "@/components/depositModal";
+import WithdrawModal from "@/components/withdrawModal";
+import AddAddressModal from "@/components/addAddressModal";
+import AddressList from "@/components/addressList";
+import { timeStamp } from "console";
+import FAQAccordion from "@/components/accordian";
+import { faqData } from "../helper/constants";
 
 export default function Dashboard(p: any) {
   const [fetchTime, setFetchTime] = useState(0);
   const [loadStatus, setLoadStatus] = useState(0);
   const [isOpen, setOpen] = useState(false);
-  const [modalTarget, setModalTarget] = useState('');
+  const [modalTarget, setModalTarget] = useState("");
   const [addressData, setAddressData] = useState([]);
   const [balancesData, setBalancesData] = useState([]);
   const [chainData, setChainData] = useState([]);
 
   const openModal = (action: string) => {
-    document.body.className = isOpen ? '' : 'novr';
+    document.body.className = isOpen ? "" : "novr";
 
     setOpen(!isOpen);
     setModalTarget(action);
@@ -65,7 +65,7 @@ export default function Dashboard(p: any) {
   };
 
   const loadChains = async () => {
-    const { data, error, isLoading } = await useSWR('/getChains', fetcher);
+    const { data, error, isLoading } = await useSWR("/getChains", fetcher);
     let chainList = data && data.result ? data.result : [];
 
     if (chainList) setChainData(chainList);
@@ -91,7 +91,7 @@ export default function Dashboard(p: any) {
       {isOpen &&
         (() => {
           switch (modalTarget) {
-            case 'deposit':
+            case "deposit":
               return (
                 <DepositModal
                   inFunct={openModal}
@@ -99,7 +99,7 @@ export default function Dashboard(p: any) {
                   refreshData={refreshData}
                 />
               );
-            case 'withdraw':
+            case "withdraw":
               return (
                 <WithdrawModal
                   inFunct={openModal}
@@ -109,7 +109,7 @@ export default function Dashboard(p: any) {
                   refreshData={refreshData}
                 />
               );
-            case 'addWallet':
+            case "addWallet":
               return (
                 <AddAddressModal
                   inFunct={openModal}
@@ -127,7 +127,7 @@ export default function Dashboard(p: any) {
           <div className='row left'>
             <h3>
               Balances
-              <div className='ribtn' onClick={() => openModal('withdraw')}>
+              <div className='ribtn' onClick={() => openModal("withdraw")}>
                 <svg
                   width='18px'
                   height='18px'
@@ -143,21 +143,21 @@ export default function Dashboard(p: any) {
                     strokeLinejoin='round'
                   ></g>
                   <g id='SVGRepo_iconCarrier'>
-                    {' '}
+                    {" "}
                     <path
                       d='M12 17L12 8'
                       stroke='#ffffff'
                       strokeWidth='2'
                       strokeLinecap='round'
                       strokeLinejoin='round'
-                    ></path>{' '}
+                    ></path>{" "}
                     <path
                       d='M16 11L12 7L8 11'
                       stroke='#ffffff'
                       strokeWidth='2'
                       strokeLinecap='round'
                       strokeLinejoin='round'
-                    ></path>{' '}
+                    ></path>{" "}
                   </g>
                 </svg>
                 Withdraw
@@ -166,7 +166,7 @@ export default function Dashboard(p: any) {
                 <svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M16 13V11.5H10V9.5H16V8L19 10.5L16 13Z" fill="#ffffff"></path> <path d="M8 17V15.5H14V13.5H8V12L5 14.5L8 17Z" fill="#ffffff"></path> </g></svg>
                 Transfer
               </div> */}
-              <div className='ribtn' onClick={() => openModal('deposit')}>
+              <div className='ribtn' onClick={() => openModal("deposit")}>
                 <svg
                   width='18px'
                   height='18px'
@@ -181,21 +181,21 @@ export default function Dashboard(p: any) {
                     strokeLinejoin='round'
                   ></g>
                   <g id='SVGRepo_iconCarrier'>
-                    {' '}
+                    {" "}
                     <path
                       d='M12 7L12 16'
                       stroke='#ffffff'
                       strokeWidth='2'
                       strokeLinecap='round'
                       strokeLinejoin='round'
-                    ></path>{' '}
+                    ></path>{" "}
                     <path
                       d='M8 13L12 17L16 13'
                       stroke='#ffffff'
                       strokeWidth='2'
                       strokeLinecap='round'
                       strokeLinejoin='round'
-                    ></path>{' '}
+                    ></path>{" "}
                   </g>
                 </svg>
                 Deposit
@@ -217,9 +217,9 @@ export default function Dashboard(p: any) {
                           ></div>
                           <div className='balTicker'>
                             <img
-                              src={'/images/' + dt.ticker + '.png'}
+                              src={"/images/" + dt.ticker + ".png"}
                               className='tickerIcon'
-                            />{' '}
+                            />{" "}
                             {dt.ticker.toUpperCase()}
                           </div>
                           {/* <div>on <img src={"/images/"+dt.chain+".png"} className='chainIcon' /> {dt.chain}</div> */}
@@ -229,14 +229,14 @@ export default function Dashboard(p: any) {
                   ) : (
                     <div
                       className='balanceBoxNil'
-                      onClick={() => openModal('deposit')}
+                      onClick={() => openModal("deposit")}
                     >
                       {/* <div className='balance'>-</div>
                                 <div className='balTicker'>-</div>
                                 <div>on -</div> */}
                       <div
                         className='boxDep'
-                        onClick={() => openModal('deposit')}
+                        onClick={() => openModal("deposit")}
                       >
                         <svg
                           width='24px'
@@ -252,21 +252,21 @@ export default function Dashboard(p: any) {
                             strokeLinejoin='round'
                           ></g>
                           <g id='SVGRepo_iconCarrier'>
-                            {' '}
+                            {" "}
                             <path
                               d='M12 7L12 16'
                               stroke='#333'
                               strokeWidth='2'
                               strokeLinecap='round'
                               strokeLinejoin='round'
-                            ></path>{' '}
+                            ></path>{" "}
                             <path
                               d='M8 13L12 17L16 13'
                               stroke='#333'
                               strokeWidth='2'
                               strokeLinecap='round'
                               strokeLinejoin='round'
-                            ></path>{' '}
+                            ></path>{" "}
                           </g>
                         </svg>
                         Deposit Gas
@@ -289,11 +289,11 @@ export default function Dashboard(p: any) {
             {loadStatus == 200 ? (
               <>
                 <h3>
-                  Allowance Wallets{' '}
+                  Allowance Wallets{" "}
                   <span className='counts'>
                     {convertNumberFromat(addressData.length)}
-                  </span>{' '}
-                  <div className='rbtn' onClick={() => openModal('addWallet')}>
+                  </span>{" "}
+                  <div className='rbtn' onClick={() => openModal("addWallet")}>
                     + Add Wallet
                   </div>
                 </h3>
@@ -331,8 +331,8 @@ export default function Dashboard(p: any) {
             ) : (
               <>
                 <h3>
-                  Linked Wallets <span className='counts'>0</span>{' '}
-                  <div className='rbtn' onClick={() => openModal('addWallet')}>
+                  Linked Wallets <span className='counts'>0</span>{" "}
+                  <div className='rbtn' onClick={() => openModal("addWallet")}>
                     + Add Wallet
                   </div>
                 </h3>
@@ -343,13 +343,22 @@ export default function Dashboard(p: any) {
         </div>
         <div
           style={{
-            padding: '20px',
+            padding: "20px",
           }}
         >
           <div>
-            <h1 style={{ textAlign: 'center' }}>Frequently Asked Questions</h1>
+            <h1 style={{ textAlign: "center" }}>FAQ</h1>
             <FAQAccordion items={faqData} />
           </div>
+        </div>
+        <div className='beta_text'>
+          <span>
+            This product is still in beta. If you run into any issue please let
+            us know in our{" "}
+            <a href='www.discord/numa' target='_blank'>
+              discord server{" "}
+            </a>
+          </span>
         </div>
       </div>
 

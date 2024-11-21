@@ -210,7 +210,6 @@ header {
   padding: 15px;
 }
 
-
 .listAddr:hover .deleteicon {
   visibility: visible;
 }
@@ -287,8 +286,8 @@ header {
 }
 
 .balance {
- font-size: 21px;
- font-weight: bold;
+  font-size: 21px;
+  font-weight: bold;
 }
 
 .balTicker {
@@ -332,7 +331,8 @@ table {
   font-size: 13px;
 }
 
-th, td {
+th,
+td {
   padding: 8px 20px;
   text-align: left;
 }
@@ -349,21 +349,21 @@ td {
   border-bottom: 1px solid #ddd;
 }
 
-tr:nth-child(2) td:last-child{
+tr:nth-child(2) td:last-child {
   border-top-right-radius: 4px;
 }
 
-tr:nth-child(2) td:first-child{
+tr:nth-child(2) td:first-child {
   border-top-left-radius: 4px;
 }
 
-tr:last-child td:last-child{
-  border-bottom:0;
+tr:last-child td:last-child {
+  border-bottom: 0;
   border-bottom-right-radius: 4px;
 }
 
-tr:last-child td:first-child{
-  border-bottom:0;
+tr:last-child td:first-child {
+  border-bottom: 0;
   border-bottom-left-radius: 4px;
 }
 
@@ -669,21 +669,23 @@ tr:last-child td:first-child{
 }
 
 @keyframes loading-bar-spinner {
-  0%   { transform: rotate(0deg);   transform: rotate(0deg); }
-  100% { transform: rotate(360deg); transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
-
-
-
 
 .pagination {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   padding: 8px 0 0 0;
-  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
 }
-
 
 .pagination .li {
   margin: 0 5px;
@@ -703,11 +705,8 @@ tr:last-child td:first-child{
 
 footer {
   text-align: center;
-  margin: 80px 0 20px 0;
+  margin: 20px 0 20px 0;
 }
-
-
-
 
 @media screen and (max-width: 1300px) {
   body {
@@ -731,7 +730,7 @@ footer {
   }
 
   .modalCont {
-    width: 80%
+    width: 80%;
   }
 }
 
@@ -784,4 +783,112 @@ footer {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #cdcccf;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  color: #333;
+  padding: 10px;
+}
+
+.item {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 500;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.question span {
+  font-size: 18px;
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 14px;
+  }
+}
+
+.question.active {
+  color: #fff;
+}
+
+.icon {
+  display: inline-block;
+  transition: transform 0.4s ease-in-out;
+}
+
+.icon.rotated {
+  transform: rotate(180deg);
+  transition: transform 0.4s ease-in-out;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  color: #fff;
+  font-size: 16px;
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 12px;
+  }
+}
+
+.answer.expanded {
+  max-height: 200px; /* Set a sensible default */
+}
+
+.answer div {
+  padding: 10px 0;
+}
+
+.downArrow {
+  color: #ffffff !important;
+}
+
+.beta_text {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 60px;
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 12px;
+  }
+}
+
+.copyBox {
+  position: relative;
+  display: inline-block;
+}
+
+.copyIcon {
+  cursor: pointer;
+}
+
+.tooltip {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 10000;
 }
