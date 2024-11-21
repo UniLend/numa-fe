@@ -464,9 +464,28 @@ tr:last-child td:first-child {
 
   input {
     margin-right: 10px;
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     color: #4169e1;
+  }
+}
+
+.termsOfUseContainer,
+.privacyPolicyContainer {
+  max-width: 1400px;
+  width: 70%;
+  margin: auto;
+  background-color: #fff;
+  padding: 40px 60px;
+  color: #000;
+  ul {
+    list-style-type: disc;
+    margin-left: 32px;
+  }
+  @media screen and (max-width: 800px) {
+    width: 86%;
+    margin: auto;
+    padding: 20px 40px;
   }
 }
 
