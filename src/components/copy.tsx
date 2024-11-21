@@ -1,25 +1,32 @@
-'use client';
-import React from "react";
+"use client";
+import React, { useState } from "react";
 
-function copy(data: string){
-    var inp =document.createElement('input');
-    document.body.appendChild(inp)
-    inp.value = data
-    inp.select();
-    document.execCommand('copy',false);
-    inp.remove();
-}
+import { copyToClipboard } from "@/helper/constants";
+const CopyButton = (p: { data: string; isWhite?: boolean }) => {
+  const [tooltipVisible, setTooltipVisible] = useState(false);
 
+  const handleCopy = () => {
+    if (p.data) {
+      copyToClipboard(p.data);
+      setTooltipVisible(true);
 
-const CopyButton = ( p: any ) => {
-    // params.data
-    if(p.data){
-        return (
-            <>
-                <img src={p.isWhite ? "/images/copyWhite.svg" : "/images/copy.svg"} className="copyicon" onClick={() => copy(p.data)} />
-            </>
-        )
+      setTimeout(() => {
+        setTooltipVisible(false);
+      }, 1000);
     }
-}
+  };
+
+  return (
+    <div className='copyBox'>
+      <img
+        src={p.isWhite ? "/images/copyWhite.svg" : "/images/copy.svg"}
+        className='copyicon'
+        onClick={handleCopy}
+        alt='Copy'
+      />
+      {tooltipVisible && <span className='tooltip'>Address Copied!</span>}
+    </div>
+  );
+};
 
 export default CopyButton;

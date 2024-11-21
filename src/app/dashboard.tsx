@@ -351,6 +351,15 @@ export default function Dashboard(p: any) {
             <FAQAccordion items={faqData} />
           </div>
         </div>
+        <div className='beta_text'>
+          <span>
+            This product is still in beta. If you run into any issue please let
+            us know in our{" "}
+            <a href='www.discord/numa' target='_blank'>
+              discord server{" "}
+            </a>
+          </span>
+        </div>
       </div>
 
       <footer>&copy; 2024 Numa Network. All Rights Reserved.</footer>

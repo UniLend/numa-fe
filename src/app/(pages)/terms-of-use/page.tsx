@@ -36,14 +36,14 @@ export default function TermsOfUse() {
         Supplemental terms and conditions or documents that may be posted on the
         Services from time to time are hereby expressly incorporated herein by
         reference. We reserve the right, in our sole discretion, to make changes
-        or modifications to these Legal T erms from time to time. We will alert
+        or modifications to these Legal Terms from time to time. We will alert
         you about any changes by updating the "Last updated" date of these Legal
-        T erms, and you waive any right to receive specific notice of each such
+        Terms, and you waive any right to receive specific notice of each such
         change. It is your responsibility to periodically review these Legal T
         erms to stay informed of updates. You will be subject to, and will be
         deemed to have been made aware of and to have accepted, the changes in
-        any revised Legal T erms by your continued use of the Services after the
-        date such revised Legal T erms are posted.
+        any revised Legal Terms by your continued use of the Services after the
+        date such revised Legal Terms are posted.
       </p>
       <p>
         The Services are intended for users who are at least 18 years old.
@@ -51,7 +51,7 @@ export default function TermsOfUse() {
         Services.
       </p>
       <p>
-        We recommend that you print a copy of these Legal T erms for your
+        We recommend that you print a copy of these Legal Terms for your
         records.
       </p>
       <h3>TABLE OF CONTENTS</h3>
@@ -83,12 +83,10 @@ export default function TermsOfUse() {
           United States of America or any Prohibited Localities, namely
           Restricted Persons, as defined below. We do not make exceptions. If
           you are a Restricted Person, then do not attempt to access or use the
-          services.
+          services. Use of a virtual private network (e.g., a VPN) or other
+          means by Restricted Persons to access or use the services is
+          prohibited.
         </strong>
-      </p>
-      <p>
-        Use of a virtual private network (e.g., a VPN) or other means by
-        Restricted Persons to access or use the services is prohibited.
       </p>
       <p>
         For all other nationality users, the information provided when using the
@@ -96,19 +94,22 @@ export default function TermsOfUse() {
         entity in any jurisdiction or country where such distribution or use
         would be contrary to law or regulation or which would subject us to any
         registration requirement within such jurisdiction or country.
+        Accordingly, those persons who choose to access the services from other
+        locations do so on their own initiative and are solely responsible for
+        compliance with local laws, if and to the extent local laws are
+        applicable.
       </p>
       <h3>Products and Features</h3>
       <p>
-        The Interface allows users to manage gas (<strong>Gas Fees</strong>)
-        when they interact with different Blockchains and offers access to
-        numerous liquidity sources across multiple chains.
+        The Interface allows users to manage gas (<span>Gas Fees</span>) when
+        they interact with different Blockchains and offers access to numerous
+        liquidity sources across multiple chains. The Interface may include
+        other products and/or features added for user experience development and
+        improvement, including informational, security, and entertainment
+        purposes. These are not intended to affect the main purpose of the
+        Interface described above.
       </p>
-      <p>
-        The Interface may include other products and/or features added for user
-        experience development and improvement, including informational,
-        security, and entertainment purposes. These are not intended to affect
-        the main purpose of the Interface described above.
-      </p>
+
       <p>
         We only provide you with access to the relevant interface and software
         and neither control your interactions with the blockchain nor encourage
@@ -169,7 +170,7 @@ export default function TermsOfUse() {
         conflict, the provisions of any such special terms or other agreement
         shall prevail.
       </p>
-      <h3>INTELLECTUAL PROPERTY RIGHTS</h3>
+      <h3>2. INTELLECTUAL PROPERTY RIGHTS</h3>
       <p>Our Intellectual Property</p>
       <p>
         We are the owner or the licensee of all intellectual property rights in
@@ -198,10 +199,13 @@ export default function TermsOfUse() {
         <li>Access the Services</li>
         <li>
           Download or print a copy of any portion of the Content to which you
-          have properly gained access, solely for your personal, non-commercial
-          use or internal business purpose
+          have properly gained access,
         </li>
       </ul>
+      <p>
+        solely for your personal, non-commercial use or internal business
+        purpose.
+      </p>
       <p>
         Except as set out in this section or elsewhere in our Legal Terms, no
         part of the Services and no Content or Marks may be copied, reproduced,
@@ -227,13 +231,13 @@ export default function TermsOfUse() {
       </p>
       <p>
         Any breach of these Intellectual Property Rights will constitute a
-        material breach of our Legal T erms and your right to use our Services
+        material breach of our Legal Terms and your right to use our Services
         will terminate immediately.
       </p>
       <h3>3. USER REPRESENTATIONS</h3>
       <p>
         By using the Services, you represent and warrant that: (1) you have the
-        legal capacity and you agree to comply with these Legal T erms; (2) you
+        legal capacity and you agree to comply with these Legal Terms; (2) you
         are not a minor in the jurisdiction in which you reside; (3) you will
         not access the Services through automated or non-human means, whether
         through a bot, script or otherwise; (4) you will not use the Services
@@ -365,12 +369,12 @@ export default function TermsOfUse() {
       <h3>5. SERVICES MANAGEMENT</h3>
       <p>
         We reserve the right, but not the obligation, to: (1) monitor the
-        Services for violations of these Legal T erms; (2) take appropriate
-        legal action against anyone who, in our sole discretion, violates the
-        law or these Legal T erms, including without limitation, reporting such
-        user to law enforcement authorities; (3) in our sole discretion and
-        without limitation, refuse, restrict access to, limit the availability
-        of, or disable (to the extent technologically feasible) any of your
+        Services for violations of these Legal Terms; (2) take appropriate legal
+        action against anyone who, in our sole discretion, violates the law or
+        these Legal Terms, including without limitation, reporting such user to
+        law enforcement authorities; (3) in our sole discretion and without
+        limitation, refuse, restrict access to, limit the availability of, or
+        disable (to the extent technologically feasible) any of your
         Contributions or any portion thereof; (4) in our sole discretion and
         without limitation, notice, or liability, to remove from the Services or
         otherwise disable all files and content that are excessive in size or
@@ -382,12 +386,12 @@ export default function TermsOfUse() {
       <p>
         We care about data privacy and security. Please review our Privacy
         Policy: privacy.numa.network. By using the Services, you agree to be
-        bound by our Privacy Policy, which is incorporated into these Legal T
-        erms.
+        bound by our Privacy Policy, which is incorporated into these Legal
+        Terms.
       </p>
       <h3>7. TERM AND TERMINATION</h3>
       <p>
-        These Legal T erms shall remain in full force and effect while you use
+        These Legal Terms shall remain in full force and effect while you use
         the Services. WITHOUT LIMITING ANY OTHER PROVISION OF THESE LEGAL TERMS,
         WE RESERVE THE RIGHT TO, IN OUR SOLE DISCRETION AND WITHOUT NOTICE OR
         LIABILITY , DENY ACCESS TO AND USE OF THE SERVICES (INCLUDING BLOCKING
@@ -418,31 +422,30 @@ export default function TermsOfUse() {
         at any time or for any reason without notice to you. You agree that we
         have no liability whatsoever for any loss, damage, or inconvenience
         caused by your inability to access or use the Services during any
-        downtime or discontinuance of the Services. Nothing in these Legal T
-        erms will be construed to obligate us to maintain and support the
-        Services or to supply any corrections, updates, or releases in
-        connection therewith.
+        downtime or discontinuance of the Services. Nothing in these Legal Terms
+        will be construed to obligate us to maintain and support the Services or
+        to supply any corrections, updates, or releases in connection therewith.
       </p>
 
       <h3>9. GOVERNING LAW</h3>
       <p>
-        These Legal T erms shall be governed by and defined following the laws
-        of BVI. UniLend LTD and yourself irrevocably consent that the courts of
-        BVI shall have exclusive jurisdiction to resolve any dispute which may
-        arise in connection with these Legal T erms.
+        These Legal Terms shall be governed by and defined following the laws of
+        BVI. UniLend LTD and yourself irrevocably consent that the courts of BVI
+        shall have exclusive jurisdiction to resolve any dispute which may arise
+        in connection with these Legal Terms.
       </p>
 
       <h3>10. DISPUTE RESOLUTION</h3>
       <h4>Informal Negotiations</h4>
       <p>
-        T o expedite resolution and control the cost of any dispute,
-        controversy, or claim related to these Legal T erms (each a "Dispute"
-        and collectively, the "Disputes") brought by either you or us
-        (individually, a "Party" and collectively, the "Parties"), the Parties
-        agree to first attempt to negotiate any Dispute (except those Disputes
-        expressly provided below) informally for at least thirty (30) days
-        before initiating arbitration. Such informal negotiations commence upon
-        written notice from one Party to the other Party.
+        To expedite resolution and control the cost of any dispute, controversy,
+        or claim related to these Legal Terms (each a "Dispute" and
+        collectively, the "Disputes") brought by either you or us (individually,
+        a "Party" and collectively, the "Parties"), the Parties agree to first
+        attempt to negotiate any Dispute (except those Disputes expressly
+        provided below) informally for at least thirty (30) days before
+        initiating arbitration. Such informal negotiations commence upon written
+        notice from one Party to the other Party.
       </p>
       <h4>Binding Arbitration</h4>
       <p>
@@ -451,7 +454,7 @@ export default function TermsOfUse() {
         relief for the alleged unlawful use of copyrights, trademarks, trade
         names, logos, trade secrets or patents, you and the Unilend LTD: (a)
         waive the right to have any and all disputes or claims arising from
-        these T erms, your use or access to the Interface or any other disputes
+        these Terms, your use or access to the Interface or any other disputes
         with the UniLend LTD (collectively, “Disputes”) resolved in a court; and
         (b) waive any right to a jury trial. Instead, you and the UniLend LTD
         agree to arbitrate Disputes that are not resolved informally (as
@@ -463,7 +466,7 @@ export default function TermsOfUse() {
       <h4>Restrictions</h4>
       <p>
         The Parties agree that any arbitration shall be limited to the Dispute
-        between the Parties individually. T o the full extent permitted by law,
+        between the Parties individually. To the full extent permitted by law,
         (a) no arbitration shall be joined with any other proceeding; (b) there
         is no right or authority for any Dispute to be arbitrated on a
         class-action basis or to utilize class action procedures; and (c) there
@@ -488,9 +491,9 @@ export default function TermsOfUse() {
       </p>
       <h4>Choice of Law</h4>
       <p>
-        These T erms are governed by and will be construed under the laws of the
-        BVI, without regard to principles of conflict of laws, govern the T erms
-        and any Dispute between you and us. Any Dispute under these T erms shall
+        These Terms are governed by and will be construed under the laws of the
+        BVI, without regard to principles of conflict of laws, govern the Terms
+        and any Dispute between you and us. Any Dispute under these Terms shall
         be finally settled by Binding Arbitration (as defined above). You
         further agree that the Interface shall be deemed to be based solely in
         the BVI and that, although the Interface may be available in other
@@ -561,8 +564,8 @@ export default function TermsOfUse() {
         partners, and employees, from and against any loss, damage, liability,
         claim, or demand, including reasonable attorneys’ fees and expenses,
         made by any third party due to or arising out of: (1) use of the
-        Services; (2) breach of these Legal T erms; (3) any breach of your
-        representations and warranties set forth in these Legal T erms; (4) your
+        Services; (2) breach of these Legal Terms; (3) any breach of your
+        representations and warranties set forth in these Legal Terms; (4) your
         violation of the rights of a third party, including but not limited to
         intellectual property rights; or (5) any overt harmful act toward any
         other user of the Services with whom you connected via the Services.
@@ -603,32 +606,31 @@ export default function TermsOfUse() {
       </p>
       <h3>17. MISCELLANEOUS</h3>
       <p>
-        These Legal T erms and any policies or operating rules posted by us on
+        These Legal Terms and any policies or operating rules posted by us on
         the Services or in respect to the Services constitute the entire
         agreement and understanding between you and us. Our failure to exercise
-        or enforce any right or provision of these Legal T erms shall not
-        operate as a waiver of such right or provision. These Legal T erms
-        operate to the fullest extent permissible by law. We may assign any or
-        all of our rights and obligations to others at any time. We shall not be
+        or enforce any right or provision of these Legal Terms shall not operate
+        as a waiver of such right or provision. These Legal Terms operate to the
+        fullest extent permissible by law. We may assign any or all of our
+        rights and obligations to others at any time. We shall not be
         responsible or liable for any loss, damage, delay, or failure to act
         caused by any cause beyond our reasonable control. If any provision or
-        part of a provision of these Legal T erms is determined to be unlawful,
+        part of a provision of these Legal Terms is determined to be unlawful,
         void, or unenforceable, that provision or part of the provision is
-        deemed severable from these Legal T erms and does not affect the
-        validity and enforceability of any remaining provisions. There is no
-        joint venture, partnership, employment or agency relationship created
-        between you and us as a result of these Legal T erms or use of the
-        Services. You agree that these Legal T erms will not be construed
-        against us by virtue of having drafted them. You hereby waive any and
-        all defenses you may have based on the electronic form of these Legal T
-        erms and the lack of signing by the parties hereto to execute these
-        Legal T erms.
+        deemed severable from these Legal Terms and does not affect the validity
+        and enforceability of any remaining provisions. There is no joint
+        venture, partnership, employment or agency relationship created between
+        you and us as a result of these Legal Terms or use of the Services. You
+        agree that these Legal Terms will not be construed against us by virtue
+        of having drafted them. You hereby waive any and all defenses you may
+        have based on the electronic form of these Legal Terms and the lack of
+        signing by the parties hereto to execute these Legal Terms.
       </p>
       <h3>18. CONTACT US</h3>
       <p>
         In order to resolve a complaint regarding the Services or to receive
         further information regarding use of the Services, please contact us at:
-        help@unilend.finance
+        <a href='mailto:help@unilend.finance'>help@unilend.finance</a>
       </p>
     </main>
   );
