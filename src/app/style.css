@@ -77,6 +77,14 @@ header {
 
 .navItem {
   cursor: pointer;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+  }
 }
 
 .cont {
@@ -258,6 +266,10 @@ header {
 
 .accountBox {
   display: flex;
+
+  .navItem {
+    margin-right: 12px;
+  }
 }
 
 .balanceCont {
@@ -449,8 +461,9 @@ tr:last-child td:first-child {
 }
 
 .checkboxContainer {
+  box-sizing: border-box;
   margin: 20px auto;
-  width: 220px;
+  width: 240px;
 
   .checkboxLabel {
     /* width: 215px; */
@@ -459,14 +472,39 @@ tr:last-child td:first-child {
     align-items: center;
     justify-content: flex-start;
     margin: 10px 0;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   input {
     margin-right: 10px;
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
     color: #4169e1;
+  }
+
+  a {
+    font-size: 16px;
+  }
+}
+
+.termsOfUseContainer,
+.privacyPolicyContainer {
+  box-sizing: border-box;
+  max-width: 1200px;
+  width: 70%;
+  margin: auto;
+  background-color: #fff;
+  padding: 40px 60px;
+  color: #000;
+  ul {
+    list-style-type: disc;
+    margin-left: 32px;
+  }
+  @media screen and (max-width: 800px) {
+    width: 100%;
+    margin: auto;
+    padding: 20px 40px;
   }
 }
 

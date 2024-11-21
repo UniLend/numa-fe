@@ -142,7 +142,14 @@ export default function Home() {
             <div className='navBox'>
               <div className='nav'>
                 <div className='navItem'>Home</div>
-                <div className='navItem'>How it Works?</div>
+                <div className='navItem'>
+                  <Link
+                    href='https://medium.com/@unilend/how-to-use-numa-network-a-step-by-step-guide-5ae7fc781a1b'
+                    target='_blank'
+                  >
+                    How it Works?
+                  </Link>
+                </div>
                 <div className='navItem'>
                   <a
                     style={{ color: "#fff", fontWeight: "500" }}
@@ -164,7 +171,15 @@ export default function Home() {
               </div>
             </div>
             <div className='accountBox'>
-              <AddNetwork />
+              {/* <AddNetwork /> */}
+              <div className='navItem'>
+                <Link
+                  href='https://medium.com/@unilend/how-to-add-numa-rpc-to-your-metamask-wallet-30b572e67bf8'
+                  target='_blank'
+                >
+                  Add RPC
+                </Link>
+              </div>
               <ConnectButton />
             </div>
           </header>
