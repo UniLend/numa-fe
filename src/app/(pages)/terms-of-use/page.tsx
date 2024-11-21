@@ -181,7 +181,7 @@ export default function TermsOfUse() {
         non-commercial use or internal business purpose only.
       </p>
 
-      <h3>Your Use of Our Services</h3>
+      <h2>Your Use of Our Services</h2>
       <p>
         Subject to your compliance with these Legal Terms, including the{" "}
         <strong>"Prohibited Activities"</strong> section below, we grant you a
@@ -209,6 +209,7 @@ export default function TermsOfUse() {
         address your request to:{" "}
         <a href='mailto:help@unilend.finance'>help@unilend.finance</a>.
       </p>
+      <h2></h2>
     </div>
   );
 }
