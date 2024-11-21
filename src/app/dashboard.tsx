@@ -347,7 +347,7 @@ export default function Dashboard(p: any) {
           }}
         >
           <div>
-            <h1 style={{ textAlign: "center" }}>FAQ</h1>
+            <h1 style={{ textAlign: "center" }}>Frequently Asked Questions</h1>
             <FAQAccordion items={faqData} />
           </div>
         </div>
@@ -362,7 +362,7 @@ export default function Dashboard(p: any) {
         </div>
       </div>
 
-      <footer>&copy; 2024 Numa. All Rights Reserved.</footer>
+      <footer>&copy; 2024 Numa Network. All Rights Reserved.</footer>
     </>
   );
 }

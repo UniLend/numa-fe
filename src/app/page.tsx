@@ -18,6 +18,7 @@ import {
 import { useWeb3Modal } from "@web3modal/wagmi/react";
 import ConnectButton from "@/components/connectButton";
 import AddNetwork from "@/components/customNetwork";
+import Link from "next/link";
 
 export default function Home() {
   const { address } = useAccount();
@@ -28,6 +29,13 @@ export default function Home() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loginStatus, setLoginStatus] = useState(0);
   const [accessToken, setAccessToken] = useState("");
+  const [isCheckboxChecked, setIsCheckboxChecked] = useState({
+    termsAndCondition: false,
+    privacyPolicy: false,
+  });
+
+  const isButtonEnabled =
+    isCheckboxChecked.termsAndCondition && isCheckboxChecked.privacyPolicy;
 
   const logOut = () => {
     if (loginStatus != 1) {
@@ -116,6 +124,13 @@ export default function Home() {
     open();
   };
 
+  const handleCheckboxChange = (key: keyof typeof isCheckboxChecked) => {
+    setIsCheckboxChecked((prevState) => ({
+      ...prevState,
+      [key]: !prevState[key],
+    }));
+  };
+
   return (
     <>
       {isLoggedIn ? (
@@ -161,13 +176,43 @@ export default function Home() {
             <div className='logoBox'>
               <img className='logo' src='/images/logo-full.png' />
             </div>
+            <div className='checkboxContainer'>
+              <label className='checkboxLabel'>
+                <input
+                  type='checkbox'
+                  checked={isCheckboxChecked.termsAndCondition}
+                  onChange={() => handleCheckboxChange("termsAndCondition")}
+                />
+                I agree to the&nbsp;
+                <Link href='/terms-of-use' target='_blank'>
+                  Terms of Use
+                </Link>
+              </label>
+              <label className='checkboxLabel'>
+                <input
+                  type='checkbox'
+                  checked={isCheckboxChecked.privacyPolicy}
+                  onChange={() => handleCheckboxChange("privacyPolicy")}
+                />
+                I agree to the&nbsp;
+                <Link href='/privacy-policy' target='_blank'>
+                  Privacy Policy
+                </Link>
+              </label>
+            </div>
             {(() => {
               switch (loginStatus) {
                 case 0:
                   return (
-                    <div className='rbtnlg' onClick={loginAction}>
+                    <button
+                      className={`rbtnlg ${
+                        !isButtonEnabled ? "btn-disabled" : ""
+                      }`}
+                      onClick={loginAction}
+                      disabled={!isButtonEnabled}
+                    >
                       Connect Wallet
-                    </div>
+                    </button>
                   );
                 case 1:
                   return <div>Signing Wallet...</div>;
