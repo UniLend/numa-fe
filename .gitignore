@@ -1,0 +1,13 @@
+.vercel
+.env
+node_modules
+package-lock.json
+.next
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+_MACOSX
+.DS_Store
+    

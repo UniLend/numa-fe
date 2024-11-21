@@ -1,0 +1,38 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@coreui/icons": "^3.0.1",
+    "@nextui-org/modal": "^2.0.39",
+    "@nextui-org/react": "^2.4.6",
+    "@tanstack/react-query": "^5.29.2",
+    "@web3modal/wagmi": "^4.1.9",
+    "bignumber.js": "^9.1.2",
+    "multicoin-address-validator": "^0.5.21",
+    "next": "14.2.1",
+    "next-qrcode": "^2.5.1",
+    "react": "^18",
+    "react-blockies": "^1.4.1",
+    "react-dom": "^18",
+    "swr": "^2.2.5",
+    "viem": "^2.9.19",
+    "wagmi": "^2.5.20"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-blockies": "^1.4.4",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.1",
+    "typescript": "^5"
+  },
+  "packageManager": "yarn@1.22.21+sha1.1959a18351b811cdeedbd484a8f86c3cc3bbaf72"
+}
