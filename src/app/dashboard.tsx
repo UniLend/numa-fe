@@ -355,7 +355,7 @@ export default function Dashboard(p: any) {
           <span>
             This product is still in beta. If you run into any issue please let
             us know in our{" "}
-            <a href='www.discord/numa' target='_blank'>
+            <a href='https://discord.gg/uqBHxsA4Ya' target='_blank'>
               discord server{" "}
             </a>
           </span>
