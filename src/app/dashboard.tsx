@@ -4,7 +4,7 @@ import ConnectButton from "@/components/connectButton";
 import TxnBox from "@/components/txnsBox";
 
 import useSWR from "swr";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   authFetcher,
   fetcher,

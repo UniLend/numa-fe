@@ -19,6 +19,13 @@ import { useWeb3Modal } from "@web3modal/wagmi/react";
 import ConnectButton from "@/components/connectButton";
 import AddNetwork from "@/components/customNetwork";
 import Link from "next/link";
+import Dropdown from "@/components/common/dropdown";
+import Modal from "@/components/common/modal";
+
+interface Option {
+  id: number;
+  label: string;
+}
 
 export default function Home() {
   const { address } = useAccount();
@@ -33,6 +40,14 @@ export default function Home() {
     termsAndCondition: false,
     privacyPolicy: false,
   });
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [selectedNetwork, setSelectedNetwork] = useState("ethereum");
+  const [selected, setSelected] = useState(null);
+
+  const options: Option[] = [
+    { id: 1, label: "Base" },
+    { id: 2, label: "Ethereum" },
+  ];
 
   const isButtonEnabled =
     isCheckboxChecked.termsAndCondition && isCheckboxChecked.privacyPolicy;
@@ -131,6 +146,27 @@ export default function Home() {
     }));
   };
 
+  const handleSelect = (option: Option) => {
+    openModal();
+    setSelectedNetwork(String(option?.label).toLocaleLowerCase());
+  };
+
+  const clearSelection = () => {
+    setSelected(null);
+  };
+
+  const openModal = () => setIsModalVisible(true);
+  const closeModal = () => {
+    setIsModalVisible(false);
+    clearSelection();
+  };
+
+  useEffect(() => {
+    if (!isModalVisible) {
+      setSelected(null);
+    }
+  }, [isModalVisible]);
+
   return (
     <>
       {isLoggedIn ? (
@@ -172,16 +208,52 @@ export default function Home() {
             </div>
             <div className='accountBox'>
               {/* <AddNetwork /> */}
-              <div className='navItem'>
+              {/* <div className='navItem'>
                 <Link
                   href='https://medium.com/@unilend/how-to-add-numa-rpc-to-your-metamask-wallet-30b572e67bf8'
                   target='_blank'
                 >
                   Add RPC
                 </Link>
-              </div>
+              </div> */}
+              <Dropdown
+                options={options}
+                onSelect={handleSelect}
+                renderOption={(option) => <span>{option.label}</span>}
+                placeholder='Add RPC'
+                setSelected={setSelected}
+                selected={selected}
+              />
               <ConnectButton />
             </div>
+            <Modal isOpen={isModalVisible} onClose={closeModal} title='Add RPC'>
+              <div className='ModalContent'>
+                {/* Handle Close modal */}
+                <p>Add Numa RPC to your Metamask wallet</p>
+                <p>
+                  For other wallets please refer this doc
+                  <Link
+                    href='https://medium.com/@unilend/how-to-add-numa-rpc-to-your-metamask-wallet-30b572e67bf8'
+                    target='_blank'
+                  >
+                    Add RPC
+                  </Link>
+                </p>
+
+                <div
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
+                  <AddNetwork
+                    network={selectedNetwork}
+                    setIsModalVisible={setIsModalVisible}
+                  />
+                </div>
+              </div>
+            </Modal>
           </header>
           <Dashboard accessToken={accessToken} logOut={logOut} />
         </>
