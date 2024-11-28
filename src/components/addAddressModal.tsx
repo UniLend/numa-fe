@@ -86,8 +86,9 @@ const AddAddressModal = (p: any) => {
               <textarea
                 className='textArea'
                 placeholder='0x35CBA8585330d96017d15d371D615584Ad43dAAB
-0x35CBA8585330d96017d15d371D615584Ad43dAAB
-0x35CBA8585330d96017d15d371D615584Ad43dAAB'
+0x1234567890aBCdEF1234567890AbcDEF12345678
+0xaBcDEFAbcDEFAbcDEFAbcDEFAbcDEFAbcDEFAbCd
+0xAbC123EF4567890abcDEF1234567890aBcDeF456'
                 onChange={(e) => checkAddressList(e)}
               ></textarea>
               {errStr && (
