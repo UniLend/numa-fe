@@ -15,15 +15,17 @@ import {
   useDisconnect,
   useSignMessage,
 } from "wagmi";
-import { useWeb3Modal } from "@web3modal/wagmi/react";
-import ConnectButton from "@/components/connectButton";
+// import { useWeb3Modal } from "@web3modal/wagmi/react";
+// import ConnectButton from "@/components/connectButton";
 import AddNetwork from "@/components/customNetwork";
+
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 export default function Home() {
   const { address } = useAccount();
   const { signMessageAsync } = useSignMessage();
   const { disconnect } = useDisconnect();
-  const { open } = useWeb3Modal();
+  // const { open } = useWeb3Modal();
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loginStatus, setLoginStatus] = useState(0);
@@ -113,7 +115,7 @@ export default function Home() {
   });
 
   const loginAction = () => {
-    open();
+    // open();
   };
 
   return (
