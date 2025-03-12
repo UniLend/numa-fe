@@ -18,7 +18,7 @@ const FAQAccordion: FC<FAQAccordionProps> = ({ items }) => {
   };
 
   return (
-    <div className='container'>
+    <div className='container acc_bx'>
       {items.map((item, index) => (
         <div key={index} className='item'>
           {/* Question */}
