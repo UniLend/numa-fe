@@ -32,8 +32,8 @@ const FAQAccordion: FC<FAQAccordionProps> = ({ items }) => {
                 className='downArrow'
                 src='/images/arrow-down-white.svg'
                 alt='Down arrow'
-                width={16}
-                height={16}
+                width={15}
+                height={15}
               />
             </span>
           </div>
